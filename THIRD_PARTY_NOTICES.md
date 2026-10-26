@@ -13,3 +13,7 @@ Djay96, **Orca Explorer**, https://github.com/Djay96/orca-dclde-explorer. Report
 ## Typography
 
 DM Sans and Manrope are requested from Google Fonts, with system sans-serif fallbacks. The application remains usable without font network access. No downloaded font binaries are bundled.
+
+## Hero photography
+
+`dist/assets/orca-hero.jpg`: Southern Resident killer whale breaching, sourced from NOAA Fisheries' article [Limiting Chinook Fishing in Low-Return Years to Help Killer Whales](https://www.fisheries.noaa.gov/feature-story/limiting-chinook-fishing-low-return-years-help-killer-whales-what-do-you-think). Original image: https://www.fisheries.noaa.gov/s3/2021-06/srkw-breach.jpg?VersionId=null. Supplied photo bytes are preserved; the browser crops and fades the image with CSS for the hero layout. This is decorative wildlife photography, not a DCLDE recording observation.

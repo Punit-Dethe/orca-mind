@@ -10,3 +10,15 @@
 
 #theme-toggle{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:10px;color:var(--text);background:var(--panel);padding:7px 10px}.hero{box-shadow:0 8px 30px #1f386205}.card{box-shadow:0 2px 8px #21385603}.notice strong{color:var(--text)}.schema-box p{color:var(--muted)}.sidebar-bottom a{color:var(--muted)}.hero-art .art-label strong{color:var(--text)}.button.secondary{color:var(--text)}.matrix .row-head{color:var(--muted)}.network text{fill:var(--text)}.timeline text{fill:var(--muted)}.card-foot{color:var(--muted)}.badge{color:var(--accent)}.badge.reported{color:var(--accent)}.badge.planned{color:var(--amber-text)}.stat strong{color:var(--text)}.hero-note{color:var(--muted)}.notice.amber{color:var(--amber-text)}.schema-box.fact strong{color:var(--accent)}.finding-card .comparison .baseline strong{color:var(--comparison)}
 @media(max-width:650px){.header-right{display:flex}.header-right .live-dot,.header-right>a{display:none}#theme-toggle{font-size:9px;padding:6px 8px}}
+
+/* Real wildlife photography, blended into the existing hero at the left edge. */
+.hero-copy{position:relative;z-index:2}
+.hero-art{position:absolute;inset:0 0 0 40%;min-height:0;display:block;mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.12) 10%,rgba(0,0,0,.48) 24%,#000 43%);-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.12) 10%,rgba(0,0,0,.48) 24%,#000 43%)}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:72% 48%;display:block}
+.hero-art::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,22,40,.32),transparent 30%);pointer-events:none}
+.hero-art .art-label{z-index:1;color:#f0f4fb;text-shadow:0 1px 5px #10172288;font-size:7px;letter-spacing:1.1px;bottom:20px;right:22px}
+.hero-art .art-label strong{color:#fff;font-size:11px}
+.hero-art .art-label a{text-decoration:none}
+.hero-art .art-label a:hover{text-decoration:underline}
+:root[data-theme="dark"] .hero-photo{filter:brightness(.8)}
+@media(max-width:900px){.hero-art{display:block;inset:0 0 0 26%;opacity:.22;pointer-events:none}.hero-art{mask-image:linear-gradient(to right,transparent,#000 78%);-webkit-mask-image:linear-gradient(to right,transparent,#000 78%)}.hero-photo{object-position:75% 48%}.hero-art .art-label{display:none}.hero-copy{max-width:650px}}
