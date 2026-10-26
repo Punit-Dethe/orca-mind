@@ -16,6 +16,22 @@ npm start
 
 Open **http://localhost:5173**. The checked-in `dist/` includes verified, precomputed data, so the dashboard starts without downloading the raw CSV or audio. Alternatively, `python3 -m http.server 5173 --directory dist` works. ES modules and JSON requests require HTTP; opening `index.html` directly as a file will not work.
 
+## Deploy on Vercel
+
+Import this GitHub repository with the **Root Directory left at the repository root**. The checked-in `vercel.json` selects the Other framework preset, skips installation/build commands, and publishes `dist/` directly. All dashboard data and the hero photo are already included; no environment variables, Python jobs, or Node server are required in production.
+
+If configuring the project manually, use:
+
+| Setting | Value |
+| --- | --- |
+| Framework Preset | Other |
+| Root Directory | Repository root (leave blank) |
+| Build Command | Override enabled, field empty |
+| Output Directory | `dist` |
+| Install Command | Override enabled, field empty |
+
+Use the latest `main` deployment after applying this configuration. `npm start` is only the local development server; do not use it as the Vercel Build Command. Navigation uses URL fragments, so no catch-all rewrite is needed. A successful deployment serving the repository root can otherwise show a root 404 because `index.html` is inside `dist/`.
+
 ## What works
 
 - **Overview:** scoped annotation counts, recording counts, supplied call labels, ecotype composition, provider coverage and a sourced research highlight.
