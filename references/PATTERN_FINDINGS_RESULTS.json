@@ -1,0 +1,146 @@
+{
+  "status": "exploratory",
+  "killer_whale_recordings": 2453,
+  "finding_005_temporal_spacing": {
+    "status": "exploratory",
+    "finding": "Within recordings containing both transition kinds, same-type calls have shorter start-to-start spacing than call-type changes.",
+    "unit_of_analysis": "recording",
+    "eligible_recordings": 256,
+    "median_of_recording_same_type_medians_seconds": 4.438000000000006,
+    "median_of_recording_changed_type_medians_seconds": 7.329749999999998,
+    "same_type_shorter_recordings": 177,
+    "same_type_shorter_fraction": 0.69140625,
+    "wilcoxon_signed_rank": {
+      "statistic": 8138.0,
+      "two_sided_p": 2.4266125503978752e-12
+    },
+    "interpretation_boundary": "Shorter spacing is consistent with repeated-call bouts. Annotation selection, omitted sounds, overlaps, and call duration can also affect start-to-start intervals; the result does not establish syntax or meaning."
+  },
+  "finding_006_specific_transition_scan": {
+    "status": "exploratory_negative",
+    "question": "Are any adequately supported directed call-type transitions more frequent than expected under random within-recording order?",
+    "recordings_with_two_or_more_typed_calls": 443,
+    "candidate_pairs_tested": 224,
+    "permutations": 5000,
+    "seed": 20260821,
+    "pairs_below_fdr_0_05": 0,
+    "top_candidates": [
+      {
+        "transition": "T01 -> T02",
+        "observed": 18,
+        "random_order_expected": 10.736123136123137,
+        "enrichment_ratio": 1.6765828569380476,
+        "permutation_p_greater": 0.0013997200559888023,
+        "benjamini_hochberg_q": 0.3135372925414917,
+        "provider_ecotype_groups": {
+          "DFO_CRP|TKW": 9,
+          "JASCO_VFPA_ONC|mixed_or_missing": 9
+        }
+      },
+      {
+        "transition": "S01 & S01 -> S01",
+        "observed": 10,
+        "random_order_expected": 5.579930275571168,
+        "enrichment_ratio": 1.7921370888413815,
+        "permutation_p_greater": 0.007798440311937612,
+        "benjamini_hochberg_q": 0.7913084049856697,
+        "provider_ecotype_groups": {
+          "JASCO_VFPA|SRKW": 7,
+          "JASCO_VFPA_ONC|SRKW": 3
+        }
+      },
+      {
+        "transition": "EL -> whistle/tone",
+        "observed": 10,
+        "random_order_expected": 5.227152048840021,
+        "enrichment_ratio": 1.9130876443931149,
+        "permutation_p_greater": 0.010597880423915218,
+        "benjamini_hochberg_q": 0.7913084049856697,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 10
+        }
+      },
+      {
+        "transition": "S44 -> S42",
+        "observed": 20,
+        "random_order_expected": 13.502546137693484,
+        "enrichment_ratio": 1.4812021226254752,
+        "permutation_p_greater": 0.02539492101579684,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "JASCO_VFPA|SRKW": 10,
+          "JASCO_VFPA_ONC|SRKW": 8,
+          "SIMRES|SRKW": 2
+        }
+      },
+      {
+        "transition": "rasp -> S04",
+        "observed": 13,
+        "random_order_expected": 9.609205789640571,
+        "enrichment_ratio": 1.3528693509733087,
+        "permutation_p_greater": 0.03239352129574085,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 13
+        }
+      },
+      {
+        "transition": "S04 -> rasp",
+        "observed": 13,
+        "random_order_expected": 9.609205789640571,
+        "enrichment_ratio": 1.3528693509733087,
+        "permutation_p_greater": 0.03479304139172166,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 13
+        }
+      },
+      {
+        "transition": "S18 -> whistle",
+        "observed": 7,
+        "random_order_expected": 3.575205378211374,
+        "enrichment_ratio": 1.9579294780267988,
+        "permutation_p_greater": 0.03839232153569286,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 7
+        }
+      },
+      {
+        "transition": "S01 -> S01 & S01",
+        "observed": 9,
+        "random_order_expected": 5.579930275571168,
+        "enrichment_ratio": 1.6129233799572433,
+        "permutation_p_greater": 0.038592281543691265,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "JASCO_VFPA|SRKW": 6,
+          "JASCO_VFPA_ONC|SRKW": 3
+        }
+      },
+      {
+        "transition": "S44 -> whistle",
+        "observed": 7,
+        "random_order_expected": 3.8959226712286683,
+        "enrichment_ratio": 1.7967502413985004,
+        "permutation_p_greater": 0.0611877624475105,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 7
+        }
+      },
+      {
+        "transition": "whistle/tone -> S18",
+        "observed": 6,
+        "random_order_expected": 3.3192451197338553,
+        "enrichment_ratio": 1.8076399252132045,
+        "permutation_p_greater": 0.08598280343931214,
+        "benjamini_hochberg_q": 1.0,
+        "provider_ecotype_groups": {
+          "SIMRES|SRKW": 6
+        }
+      }
+    ],
+    "conclusion": "No individual directed transition survived false-discovery-rate correction. Specific motifs remain leads only."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "status": "exploratory",
+  "killer_whale_recordings_in_all_split": 2453,
+  "finding_002_call_type_richness": {
+    "status": "exploratory",
+    "finding": "Per-recording labeled call-type richness differs among OKW, SRKW, and TKW within the ONC provider subset.",
+    "unit_of_analysis": "recording",
+    "provider_held_constant": "ONC",
+    "by_ecotype": {
+      "OKW": {
+        "recordings": 26,
+        "median_unique_call_types": 1.5
+      },
+      "SRKW": {
+        "recordings": 23,
+        "median_unique_call_types": 1.0
+      },
+      "TKW": {
+        "recordings": 24,
+        "median_unique_call_types": 1.0
+      }
+    },
+    "kruskal_wallis": {
+      "h": 11.888083577912798,
+      "p": 0.0026214130121964127
+    },
+    "pairwise_mann_whitney": {
+      "OKW_vs_SRKW": {
+        "u": 425.5,
+        "p_unadjusted": 0.0017610174995825304,
+        "p_holm": 0.005283052498747592
+      },
+      "OKW_vs_TKW": {
+        "u": 410.5,
+        "p_unadjusted": 0.024009355569647114,
+        "p_holm": 0.04801871113929423
+      },
+      "SRKW_vs_TKW": {
+        "u": 242.5,
+        "p_unadjusted": 0.2548666180544822,
+        "p_holm": 0.2548666180544822
+      }
+    },
+    "interpretation_boundary": "Richness describes supplied human labels in selected recordings, not complete repertoire size in the wild."
+  },
+  "finding_003_call_type_adjacency": {
+    "status": "exploratory",
+    "finding": "Identical call-type labels occur adjacently more often than expected under random within-recording order.",
+    "eligible_recordings": 276,
+    "adjacent_pairs": 5806,
+    "observed_matches": 2782,
+    "observed_match_rate": 0.47915949018256976,
+    "random_order_mean_matches": 2023.1392,
+    "random_order_mean_rate": 0.34845663107130553,
+    "absolute_rate_difference": 0.1307028591112642,
+    "permutation_p_greater": 0.0001999600079984003,
+    "permutations": 5000,
+    "seed": 20260821,
+    "large_provider_ecotype_subgroups": {
+      "DFO_CRP|NRKW": {
+        "recordings": 64,
+        "adjacent_pairs": 918,
+        "observed_match_rate": 0.528322440087146,
+        "random_order_expected_rate": 0.37455343119901846,
+        "rate_difference": 0.1537690088881275
+      },
+      "ONC|OKW": {
+        "recordings": 13,
+        "adjacent_pairs": 169,
+        "observed_match_rate": 0.7988165680473372,
+        "random_order_expected_rate": 0.7603261301486153,
+        "rate_difference": 0.03849043789872201
+      },
+      "SIMRES|SRKW": {
+        "recordings": 96,
+        "adjacent_pairs": 2290,
+        "observed_match_rate": 0.4707423580786026,
+        "random_order_expected_rate": 0.3391579908699544,
+        "rate_difference": 0.13158436720864822
+      },
+      "SMRUConsulting|SRKW": {
+        "recordings": 29,
+        "adjacent_pairs": 158,
+        "observed_match_rate": 0.4177215189873418,
+        "random_order_expected_rate": 0.34811359526549396,
+        "rate_difference": 0.06960792372184779
+      },
+      "SMRUConsulting|mixed_or_missing": {
+        "recordings": 19,
+        "adjacent_pairs": 127,
+        "observed_match_rate": 0.41732283464566927,
+        "random_order_expected_rate": 0.2973008181669599,
+        "rate_difference": 0.12002201647870937
+      },
+      "JASCO_VFPA_ONC|SRKW": {
+        "recordings": 20,
+        "adjacent_pairs": 795,
+        "observed_match_rate": 0.4075471698113208,
+        "random_order_expected_rate": 0.28757592139201665,
+        "rate_difference": 0.1199712484193041
+      }
+    },
+    "interpretation_boundary": "Clustering can indicate bouts or repeated-call sequences, but may also reflect recording selection and annotation practice. It does not demonstrate syntax, turn-taking, or meaning."
+  },
+  "finding_004_pod_label_entanglement": {
+    "status": "dataset_audit",
+    "finding": "Call type and supplied pod-group label are strongly coupled in the vfpa_srkw_standard split, creating label-leakage risk.",
+    "annotated_segments": 1336,
+    "providers": {
+      "JASCO_VFPA": 696,
+      "JASCO_VFPA_ONC": 640
+    },
+    "pod_group_counts": {
+      "J": 903,
+      "J/K/L": 184,
+      "J/L": 5,
+      "K/L": 219,
+      "L": 25
+    },
+    "unique_call_types": 27,
+    "call_type_to_majority_pod_accuracy_same_data": 0.9910179640718563,
+    "majority_pod_baseline_accuracy": 0.6758982035928144,
+    "normalized_mutual_information": 0.6104411144123706,
+    "coverage_warning": "There are no K-only labels, only 25 L-only labels, and 408 combined pod-group labels (K/L, J/K/L, or J/L).",
+    "interpretation_boundary": "This split cannot independently establish pod dialects by predicting pod from call-type labels; the variables are already entangled."
+  }
+}

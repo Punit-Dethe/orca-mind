@@ -1,0 +1,52 @@
+{
+  "status": "exploratory",
+  "hypothesis": "Within ONC recordings, OKW recordings are more likely to contain a buzzer annotation than SRKW or TKW recordings.",
+  "null_hypothesis": "Recording-level buzzer presence is independent of the OKW versus SRKW/TKW grouping.",
+  "unit_of_analysis": "recording",
+  "provider_held_constant": "ONC",
+  "by_ecotype": {
+    "OKW": {
+      "recordings": 26,
+      "with_buzzer": 11,
+      "rate": 0.4230769230769231
+    },
+    "SRKW": {
+      "recordings": 23,
+      "with_buzzer": 1,
+      "rate": 0.043478260869565216
+    },
+    "TKW": {
+      "recordings": 24,
+      "with_buzzer": 1,
+      "rate": 0.041666666666666664
+    }
+  },
+  "comparison": {
+    "groups": [
+      "OKW",
+      "SRKW+TKW"
+    ],
+    "contingency_table_present_absent": [
+      [
+        11,
+        15
+      ],
+      [
+        2,
+        45
+      ]
+    ],
+    "target_rate": 0.4230769230769231,
+    "comparison_rate": 0.0425531914893617,
+    "absolute_rate_difference": 0.38052373158756136,
+    "odds_ratio": 16.5,
+    "fisher_exact_two_sided_p": 0.00010219328600373223
+  },
+  "interpretation_boundary": "A difference is consistent with an ecotype-linked annotation or repertoire pattern. It does not establish call meaning, cultural causation, or population-wide vocalization rates.",
+  "data_diagnostics": {
+    "manifest_rows_seen": 9883,
+    "provider_rows_seen": 1233,
+    "excluded_without_acoustic_behavior": 1134,
+    "excluded_ambiguous_ecotype": 26
+  }
+}

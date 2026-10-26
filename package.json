@@ -1,0 +1,12 @@
+{
+  "name": "orcamind",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-driven orca communication research dashboard",
+  "scripts": {
+    "test": "node --test tests/data-utils.test.js",
+    "check": "node --check dist/app.js && node --check dist/data-utils.js",
+    "start": "node scripts/serve.mjs"
+  }
+}

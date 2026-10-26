@@ -1,0 +1,5 @@
+data/raw/
+data/warehouse.sqlite
+__pycache__/
+.openai/*.local.json
+node_modules/
